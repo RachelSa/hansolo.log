@@ -1,4 +1,4 @@
-# hansolo.log()
+# hansolo.log
 
 ```
 .     *          .     *            .      
