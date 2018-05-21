@@ -1,5 +1,5 @@
 {
-  "name": "hansolodotlog",
+  "name": "han_solo_log",
   "version": "1.0.0",
   "description": "A stylized javascript logger that helps you debug with the confidence of a millennium falcon commander.",
   "main": "index.js",
