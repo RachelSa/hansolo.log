@@ -1,7 +1,7 @@
 {
   "name": "han_solo_log",
   "version": "1.0.0",
-  "description": "A stylized javascript logger that helps you debug with the confidence of a millennium falcon commander.",
+  "description": "A stylized javascript logger that helps you debug with the confidence of the Millennium Falcon commander.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
