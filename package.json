@@ -1,0 +1,19 @@
+{
+  "name": "hansolodotlog",
+  "version": "1.0.0",
+  "description": "A stylized javascript logger that helps you debug with the confidence of a millennium falcon commander.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RachelSa/hansolo.log.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RachelSa/hansolo.log/issues"
+  },
+  "homepage": "https://github.com/RachelSa/hansolo.log#readme"
+}
