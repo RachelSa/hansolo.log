@@ -9,18 +9,16 @@ exports.confident = () => {
 }
 
 function printHeader(){
-  console.log(" .     *          .     *            .      ")
-  console.log("          .  *                *  .       .  ")
-  console.log("   .    === MILLENNIUM FALCON ===       *   ")
-  console.log(" .   *   .     starship log     *  .        ")
-  console.log("  *            .            .         *     \n")
+  console.log(" .     *          .     *            .      ",
+              "          .  *                *  .       .  ",
+              "   .    === MILLENNIUM FALCON ===       *   ",
+              " .   *   .     starship log     *  .        ",
+              "  *            .            .         *     \n")
 }
 
 function printMsg(msg){
   let ts = new Date()
   let dir = process.cwd()
-  console.log(`MESSAGE:\n ${msg}\n`)
-  console.log(dir)
-  console.log(ts)
-  console.log(" --------------------------------- ")
+  console.log(`MESSAGE:\n ${msg}\n`,dir,ts," --------------------------------- ")
+
 }
