@@ -1,24 +1,17 @@
 exports.solo = (msg) => {
-  printHeader()
-  printMsg(msg)
+  console.log(createHeader(), createMsg(msg))
 }
 
 exports.confident = () => {
-  printHeader()
-  printMsg("You know, sometimes I amaze even myself.")
+  console.log(createHeader(), createMsg("You know, sometimes I amaze even myself."))
 }
 
-function printHeader(){
-  console.log(" .     *          .     *            .      ",
-              "          .  *                *  .       .  ",
-              "   .    === MILLENNIUM FALCON ===       *   ",
-              " .   *   .     starship log     *  .        ",
-              "  *            .            .         *     \n")
+function createHeader(){
+  return " .     *          .     *            .      \n" + "          .  *                *  .       .  \n" + "   .    === MILLENNIUM FALCON ===       *   \n" + " .   *   .     starship log     *  .        \n" + "  *            .            .         *     \n\n"
 }
 
-function printMsg(msg){
+function createMsg(msg){
   let ts = new Date()
   let dir = process.cwd()
-  console.log(`MESSAGE:\n ${msg}\n`,dir,ts," --------------------------------- ")
-
+  return `MESSAGE:\n ${msg}\n\n` + `${dir}\n` + `${ts}\n` + " --------------------------------- "
 }
