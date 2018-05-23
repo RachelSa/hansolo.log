@@ -27,7 +27,7 @@ const han = require('han_solo_log')
 han.solo("your log here")
 
 // option 2:
-// Simply use .confident() without an argument. The header, source, and uptime will log with a pre made message.
+// Simply use .confident() without an argument. The header, source, and uptime will log with a prewritten message.
 
 han.confident()
 ```
