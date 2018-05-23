@@ -1,10 +1,12 @@
 exports.solo = function solo(msg) {
-  let funct = solo.caller.name
+  let caller = solo.caller
+  let funct = caller ? caller.name : "?"
   console.log(createHeader(), createMsg(msg, funct))
 }
 
 exports.confident = function confident() {
-  let funct = confident.caller.name
+  let caller = confident.caller
+  let funct = caller ? caller.name : "?"
   console.log(createHeader(),createMsg("You know, sometimes I amaze even myself.", funct))
 }
 
@@ -16,6 +18,6 @@ function createMsg(msg, funct){
   let uptime = process.uptime()
   let dir = __dirname.split("/")
   let file = dir[dir.length-1] || "?"
-  return `MESSAGE: ${msg}` + `\n SOURCE: {file: ${file}, function: ${funct || "?"}}` + `\n UPTIME: ${uptime}`
+  return `MESSAGE: ${msg}` + `\n SOURCE: {file: ${file}, function: ${funct}}` + `\n UPTIME: ${uptime}`
 
 }

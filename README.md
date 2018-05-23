@@ -19,15 +19,15 @@ UPTIME: 0.094
 const han = require('han_solo_log')
 
 // option 1:
-// Log a message with the millennium falcon header
-// using the .solo() logger, passing in your log message string.
-// The log will include the file name and calling function of the log ('SOURCE'),
+// Log a message with the millennium falcon header using .solo().
+// Pass in your log message string as an argument.
+// The log will include the file name and calling function ('SOURCE'),
 // as well as the number of seconds the node process runs ('UPTIME').
 
 han.solo("your log here")
 
 // option 2:
-// Simply use the .confident() logger without an argument. The header, message, source, and uptime will log.
+// Simply use .confident() without an argument. The header, source, and uptime will log with a pre made message.
 
 han.confident()
 ```
