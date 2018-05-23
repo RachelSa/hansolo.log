@@ -23,11 +23,13 @@ const han = require('han_solo_log')
 // Pass in your log message string as an argument.
 // The log will include the file name and calling function ('SOURCE'),
 // as well as the number of seconds the node process runs ('UPTIME').
+// Note: In browser, file, function, and uptime will not log.
 
 han.solo("your log here")
 
 // option 2:
 // Simply use .confident() without an argument. The header, source, and uptime will log with a prewritten message.
+// Note: In browser, file, function, and uptime will not log.
 
 han.confident()
 ```

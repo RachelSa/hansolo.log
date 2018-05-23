@@ -15,9 +15,20 @@ function createHeader(){
 }
 
 function createMsg(msg, funct){
-  let uptime = process.uptime()
-  let dir = __dirname.split("/")
-  let file = dir[dir.length-1] || "?"
-  return `MESSAGE: ${msg}` + `\n SOURCE: {file: ${file}, function: ${funct}}` + `\n UPTIME: ${uptime}`
+  if (!isBrowser()){
+    let uptime = process.uptime()
+    let dir = __dirname.split("/")
+    let file = dir[dir.length-1] || "?"
+    return `MESSAGE: ${msg}` + `\n SOURCE: {file: ${file}, function: ${funct || '?'}}` + `\n UPTIME: ${uptime}`
+  }
+  return `MESSAGE: ${msg}`
+}
 
+function isBrowser(){
+  try {
+    return !!window
+  }
+  catch(e){
+    return false
+  }
 }
