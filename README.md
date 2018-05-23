@@ -1,18 +1,13 @@
 # hansolo.log
+A stylized javascript logger that helps you debug with the confidence of the millennium falcon commander.
 
 ```
-.     *          .     *            .      
-         .  *                *  .       .  
-  .    === MILLENNIUM FALCON ===       *   
-.   *   .     starship log     *  .        
- *            .            .         *     
+.    === MILLENNIUM FALCON ===       *   
+.   *   .     starship log     *  .       .
 
-MESSAGE:
-your message here
-
-/file/path/provided
-2018-05-21T22:00:05.984Z
----------------------------------
+MESSAGE: your log here
+SOURCE: {file: sourceFileName, function: yourFunct}
+UPTIME: 0.094
 ```
 ## How to Install
 
@@ -23,11 +18,16 @@ your message here
 ```
 const han = require('han_solo_log')
 
-// log a message with the millennium falcon header
-// using the .solo() logger with your log message string.
+// option 1:
+// Log a message with the millennium falcon header
+// using the .solo() logger, passing in your log message string.
+// The log will include the file name and calling function of the log ('SOURCE'),
+// as well as the number of seconds the node process runs ('UPTIME').
 
-han.solo("log message here")
+han.solo("your log here")
 
-// or, simply use the .confident() logger without an argument.
+// option 2:
+// Simply use the .confident() logger without an argument. The header, message, source, and uptime will log.
+
 han.confident()
 ```

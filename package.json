@@ -1,10 +1,10 @@
 {
   "name": "han_solo_log",
   "version": "1.2.0",
-  "description": "A stylized javascript logger that helps you debug with the confidence of a millennium falcon commander.",
+  "description": "A stylized javascript logger that helps you debug with the confidence of the millennium falcon commander.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "repository": {
     "type": "git",
