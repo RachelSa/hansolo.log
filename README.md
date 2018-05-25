@@ -6,8 +6,9 @@ A stylized javascript logger that helps you debug with the confidence of the mil
 .   *   .     starship log     *  .       .
 
 MESSAGE: your log here
-SOURCE: {file: sourceFileName, function: yourFunct}
-UPTIME: 0.094
+TRACE: hello.js
+CALLER: yourfunct()
+UPTIME: 0.082
 ```
 ## How to Install
 
