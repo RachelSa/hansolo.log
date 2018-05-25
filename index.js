@@ -1,25 +1,20 @@
+const header =  `\n   .    === MILLENNIUM FALCON ===       *   \n .   *   .     starship log     *  .       .\n\n`
+
 exports.solo = function solo(msg) {
-  let caller = solo.caller
-  let funct = caller ? caller.name : "?"
-  console.log(createHeader(), createMsg(msg, funct))
+  const call = solo.caller
+  const caller = call && call.name ? `${call.name}()` : "global or anonymous"
+  console.log(header, createMsg(msg, caller))
 }
 
-exports.confident = function confident() {
-  let caller = confident.caller
-  let funct = caller ? caller.name : "?"
-  console.log(createHeader(),createMsg("You know, sometimes I amaze even myself.", funct))
-}
-
-function createHeader(){
-  return "\n   .    === MILLENNIUM FALCON ===       *   \n" + " .   *   .     starship log     *  .       .\n\n"
-}
+exports.confident = this.solo.bind(this, "You know, sometimes I amaze even myself.")
 
 function createMsg(msg, funct){
   if (!isBrowser()){
-    let uptime = process.uptime()
-    let dir = __dirname.split("/")
-    let file = dir[dir.length-1] || "?"
-    return `MESSAGE: ${msg}` + `\n SOURCE: {file: ${file}, function: ${funct || '?'}}` + `\n UPTIME: ${uptime}`
+    const uptime = process.uptime()
+    const path = module.parent.filename
+    const files = path.split("/")
+    const file = files[files.length-1] || "?"
+    return `MESSAGE: ${msg} \n TRACE: ${file} \n CALLER: ${funct || '?'} \n UPTIME: ${uptime}`
   }
   return `MESSAGE: ${msg}`
 }
